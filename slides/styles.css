@@ -8,8 +8,32 @@
     color: #b42121;
 }
 
+.white {
+    color: #ffffff;
+}
+
+.light-red {
+    color: #ee2c2c;
+}
+
 .blue {
     color: #345a8b;
+}
+
+.light-blue {
+    color: #394ae0;
+}
+
+.orange{
+    color: #e2a555;
+}
+
+.green {
+    color: #53a343;
+}
+
+.blur {
+    color: #dbdedf;
 }
 
 .vbr {
