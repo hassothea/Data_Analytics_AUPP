@@ -57,16 +57,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="Lab_Data_Visualization_sol_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Lab_Data_Visualization_sol_files/libs/quarto-html/quarto.js"></script>
-<script src="Lab_Data_Visualization_sol_files/libs/quarto-html/popper.min.js"></script>
-<script src="Lab_Data_Visualization_sol_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="Lab_Data_Visualization_sol_files/libs/quarto-html/anchor.min.js"></script>
-<link href="Lab_Data_Visualization_sol_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Lab_Data_Visualization_sol_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="Lab_Data_Visualization_sol_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="Lab_Data_Visualization_sol_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Lab_Data_Visualization_sol_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="Lab_Data_Visualization_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Lab_Data_Visualization_files/libs/quarto-html/quarto.js"></script>
+<script src="Lab_Data_Visualization_files/libs/quarto-html/popper.min.js"></script>
+<script src="Lab_Data_Visualization_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Lab_Data_Visualization_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Lab_Data_Visualization_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Lab_Data_Visualization_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Lab_Data_Visualization_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Lab_Data_Visualization_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Lab_Data_Visualization_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
@@ -130,31 +130,29 @@ window.Quarto = {
 
 <p><b>ITM-370: Data Analytics</b><br> <strong>Lecturer: HAS Sothea, PhD</strong></p>
 <hr>
-<p><strong>Objective:</strong> . he goal of this practical lab is to equip you all with the skills to effectively visualize data using various tools and techniques. You will learn how to interpret and represent data visually to communicate insights, trends, and patterns clearly and compellingly.</p>
+<p><strong>Objective:</strong> The goal of this practical lab is to equip you all with the skills to effectively visualize data using various tools and techniques. You will learn how to interpret and represent data visually to communicate insights, trends, and patterns clearly and compellingly.</p>
 <blockquote class="blockquote">
 <p><strong>The <code>Jupyter Notebook</code> for this Lab can be downloaded here: <a href="https://hassothea.github.io/Data_Analytics_AUPP/Labs/Lab_Data_Visualization.ipynb">Lab_Data_Visualization.ipynb</a></strong>.</p>
 </blockquote>
 <blockquote class="blockquote">
-<p><strong>Or you can work with this notebook in <code>Google Colab</code> here: <a href="https://colab.research.google.com/drive/1olaCH9qshMuwVL3Lp-nqcB7F4nJswMYe?usp=sharing">Lab_Data_Visualization.ipynb</a></strong>.</p>
+<p><strong>Or you can work with this notebook in <code>Google Colab</code> here: <a href="https://colab.research.google.com/drive/1knxBG8wBolwQlgG1JNTShIoV7NJZsHBe?usp=sharing">Lab_Data_Visualization.ipynb</a></strong>.</p>
 </blockquote>
 <hr>
 <section id="importing-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="importing-dataset">1. Importing dataset</h2>
 <p>The <code>Titanic</code> dataset contains information on the passengers aboard the RMS Titanic, which sank in <span class="math inline">\(1912\)</span>. It includes details like age, gender, class, and survival status.</p>
-<p>I bet you have heard about or watched <code>Tiannic</code> movie at least once. How about we take a look at the real dataset of <code>Titanic</code> available in Kaggle. For more information about the dataset and the columns, read <a href="https://www.kaggle.com/datasets/surendhan/titanic-dataset"><code>Titanic dataset</code></a>. Let import it to our jupyter notebook, simply by running the following codes.</p>
-<div id="cell-3" class="cell" data-execution_count="14">
+<p>I bet you have heard about or watched <code>Tiannic</code> movie at least once. How about we take a look at the real dataset of <code>Titanic</code> available in Kaggle. For more information about the dataset and the columns, read <a href="https://www.kaggle.com/datasets/surendhan/titanic-dataset"><code>Titanic dataset</code></a>. Let’s import it into our Jupyter Notebook by running the following code.</p>
+<div id="cell-3" class="cell" data-execution_count="86">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> kagglehub</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Download latest version</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> kagglehub.dataset_download(<span class="st">"surendhan/titanic-dataset"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># path = kagglehub.dataset_download("surendhan/titanic-dataset")</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># print("Path to dataset files:", path)</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(path <span class="op">+</span> <span class="st">"/titanic.csv"</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(path <span class="op">+</span> <span class="st">"/titanic.csv"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="86">
 <div>
 
 
@@ -259,59 +257,406 @@ window.Quarto = {
 </div>
 </div>
 <p><strong>A.</strong> What’s the dimension of this dataset? How many quantitative and qualitative variables are there in this dataset?</p>
-<div id="cell-5" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To do</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-5" class="cell" data-execution_count="87">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The dimension:</span><span class="sc">{</span>data<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The dimension:(418, 12)</code></pre>
+</div>
+</div>
+<div id="cell-6" class="cell" data-execution_count="88">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="88">
+<pre><code>PassengerId      int64
+Survived         int64
+Pclass           int64
+Name            object
+Sex             object
+Age            float64
+SibSp            int64
+Parch            int64
+Ticket          object
+Fare           float64
+Cabin           object
+Embarked        object
+dtype: object</code></pre>
+</div>
+</div>
+<div id="cell-7" class="cell" data-execution_count="89">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'Pclass'</span>] <span class="op">=</span> data[<span class="st">'Pclass'</span>].astype(<span class="st">'object'</span>) </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'Survived'</span>] <span class="op">=</span> data[<span class="st">'Survived'</span>].astype(<span class="st">'object'</span>) </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'PassengerId'</span>] <span class="op">=</span> data[<span class="st">'PassengerId'</span>].astype(<span class="st">'object'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-8" class="cell" data-execution_count="90">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The number of quantitative variables:</span><span class="sc">{</span>data<span class="sc">.</span>select_dtypes(include<span class="op">=</span><span class="st">'number'</span>)<span class="sc">.</span>shape[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The number of qualitative variables:</span><span class="sc">{</span>data<span class="sc">.</span>select_dtypes(exclude<span class="op">=</span><span class="st">'number'</span>)<span class="sc">.</span>shape[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The number of quantitative variables:4
+The number of qualitative variables:8</code></pre>
+</div>
 </div>
 <p><strong>B.</strong> Are there any missing values? If so, you should analyze and handle them properly.</p>
-<div id="cell-7" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To do</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-10" class="cell" data-execution_count="91">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>data.isna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="91">
+<pre><code>PassengerId      0
+Survived         0
+Pclass           0
+Name             0
+Sex              0
+Age             86
+SibSp            0
+Parch            0
+Ticket           0
+Fare             1
+Cabin          327
+Embarked         0
+dtype: int64</code></pre>
 </div>
-<p><strong>C.</strong> Visualize the distribution of each interesting column. At this stage of the analysis, you should try to see the over information about each column of the dataset: - What’s the majority class of the passengers? - How old were they during the incidence? - Where did most of them embark?</p>
-<div id="cell-9" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To do</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div id="cell-11" class="cell" data-execution_count="92">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"whitegrid"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>quan_vars <span class="op">=</span> data.select_dtypes(include<span class="op">=</span><span class="st">'number'</span>).columns</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="bu">len</span>(quan_vars)<span class="op">-</span><span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">6</span>))</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> var <span class="kw">in</span> quan_vars:</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> var <span class="op">!=</span> <span class="st">'Age'</span>:</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        sns.kdeplot(data, x<span class="op">=</span>var, ax<span class="op">=</span>axs[<span class="dv">0</span>,i])</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        axs[<span class="dv">0</span>,i].set_title(<span class="ss">f"</span><span class="sc">{</span>var<span class="sc">}</span><span class="ss"> before removing NA"</span>)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>        sns.kdeplot(data.loc[<span class="op">~</span>data[<span class="st">'Age'</span>].isna()], x<span class="op">=</span>var, ax<span class="op">=</span>axs[<span class="dv">1</span>,i])</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>        axs[<span class="dv">1</span>,i].set_title(<span class="ss">f"</span><span class="sc">{</span>var<span class="sc">}</span><span class="ss"> after removing NA"</span>)</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>        i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-12" class="cell" data-execution_count="93">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>qual_vars <span class="op">=</span> data.select_dtypes(exclude<span class="op">=</span><span class="st">'number'</span>).columns</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="bu">len</span>(qual_vars)<span class="op">-</span><span class="dv">4</span>,figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">5</span>))</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> var <span class="kw">in</span> qual_vars:</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> var <span class="kw">not</span> <span class="kw">in</span> [<span class="st">'PassengerId'</span>, <span class="st">'Name'</span>, <span class="st">'Ticket'</span>, <span class="st">'Cabin'</span>]:</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        sns.countplot(data, x<span class="op">=</span>var, stat<span class="op">=</span><span class="st">"proportion"</span>, ax<span class="op">=</span>axs[<span class="dv">0</span>,i])</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>        axs[<span class="dv">0</span>,i].set_title(<span class="ss">f"</span><span class="sc">{</span>var<span class="sc">}</span><span class="ss"> before removing NA"</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>        axs[<span class="dv">0</span>,i].bar_label(axs[<span class="dv">0</span>,i].containers[<span class="dv">0</span>], fmt<span class="op">=</span><span class="st">'</span><span class="sc">%.3f</span><span class="st">'</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>        sns.countplot(data.loc[<span class="op">~</span>data[<span class="st">'Age'</span>].isna()], x<span class="op">=</span>var, stat<span class="op">=</span><span class="st">"proportion"</span>, ax<span class="op">=</span>axs[<span class="dv">1</span>,i])</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>        axs[<span class="dv">1</span>,i].set_title(<span class="ss">f"</span><span class="sc">{</span>var<span class="sc">}</span><span class="ss"> after removing NA"</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>        axs[<span class="dv">1</span>,i].bar_label(axs[<span class="dv">1</span>,i].containers[<span class="dv">0</span>], fmt<span class="op">=</span><span class="st">'</span><span class="sc">%.3f</span><span class="st">'</span>)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>        i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-13" class="cell" data-execution_count="94">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> sns.load_dataset(<span class="st">'titanic'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-14" class="cell" data-execution_count="95">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.groupby([<span class="st">'sex'</span>, <span class="st">'survived'</span>]).size())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>sex     survived
+female  0            81
+        1           233
+male    0           468
+        1           109
+dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="word-cloud" class="level2">
+<h2 class="anchored" data-anchor-id="word-cloud">Word cloud</h2>
+<div id="cell-16" class="cell" data-execution_count="96">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wordcloud <span class="im">import</span> WordCloud</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> <span class="st">' '</span>.join(data.Name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-17" class="cell" data-execution_count="97">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> tokens.replace(<span class="st">"Mr."</span>, <span class="st">''</span>)<span class="op">\</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                .replace(<span class="st">"Mrs."</span>, <span class="st">''</span>)<span class="op">\</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                .replace(<span class="st">','</span>, <span class="st">''</span>)<span class="op">\</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>                .replace(<span class="st">'Miss'</span>, <span class="st">''</span>)<span class="op">\</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>                .replace(<span class="st">'Master'</span>, <span class="st">''</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-18" class="cell" data-execution_count="98">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>wordcloud <span class="op">=</span> WordCloud(width <span class="op">=</span> <span class="dv">800</span>, height <span class="op">=</span> <span class="dv">800</span>,</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>                    background_color <span class="op">=</span><span class="st">'white'</span>,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                    min_font_size <span class="op">=</span> <span class="dv">10</span>).generate(tokens)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">6</span>, <span class="dv">6</span>), facecolor<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>plt.imshow(wordcloud)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">"off"</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>plt.tight_layout(pad <span class="op">=</span> <span class="dv">0</span>)</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-14-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>As the missing values does not impact <strong>Survived</strong> and other variable too much, we can drop them or simply impute them using the average of the non-missing ones. For <code>Cabin</code>, we simply remove it from our analysis as it contains too many missing values.</p>
+<div id="cell-20" class="cell" data-execution_count="99">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data = data.drop(columns=["Cabin"])</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.impute <span class="im">import</span> SimpleImputer</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>imp <span class="op">=</span> SimpleImputer(missing_values<span class="op">=</span>np.nan, strategy<span class="op">=</span><span class="st">"mean"</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> data.drop(columns<span class="op">=</span>[<span class="st">'Cabin'</span>])</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">'Age'</span>]] <span class="op">=</span> imp.fit_transform(data[[<span class="st">'Age'</span>]])</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">'Fare'</span>]] <span class="op">=</span> imp.fit_transform(data[[<span class="st">'Fare'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-21" class="cell" data-execution_count="100">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data.isna().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="100">
+<pre><code>PassengerId    0
+Survived       0
+Pclass         0
+Name           0
+Sex            0
+Age            0
+SibSp          0
+Parch          0
+Ticket         0
+Fare           0
+Embarked       0
+dtype: int64</code></pre>
+</div>
+</div>
+<p><strong>C.</strong> Visualize the distribution of each interesting column. At this stage of the analysis, you should try to see the overall information of the columns of the dataset:</p>
+<ul>
+<li>What’s the majority class of the passengers?</li>
+<li>How old were they during the incidence?</li>
+<li>Where did most of them embark?</li>
+</ul>
+<div id="cell-23" class="cell" data-execution_count="101">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">2</span>,figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, var <span class="kw">in</span> <span class="bu">enumerate</span>(data.select_dtypes(include<span class="op">=</span><span class="st">"number"</span>).columns):</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    sns.histplot(data, x<span class="op">=</span>var, ax<span class="op">=</span>axs[i<span class="op">//</span><span class="dv">2</span>, i <span class="op">%</span> <span class="dv">2</span>])</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    axs[i<span class="op">//</span><span class="dv">2</span>, i <span class="op">%</span> <span class="dv">2</span>].set_title(<span class="ss">f'Distribution of </span><span class="sc">{</span>var<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    axs[i<span class="op">//</span><span class="dv">2</span>, i <span class="op">%</span> <span class="dv">2</span>].set_yscale(<span class="st">'log'</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-17-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p>There were different types of passengers on Titanic including babies and elders.</p></li>
+<li><p>There were 8 people in the largest families, and there were people who spent quite a sum on Fare (up to <span class="math inline">\(500\)</span> pounds).</p></li>
+<li><p><strong>Remark</strong>: it is important to use <code>log</code> scale on axis when the values are too concentrated or too wide spread.</p></li>
+</ul>
+<div id="cell-25" class="cell" data-execution_count="102">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">2</span>,figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> var <span class="kw">in</span> data.select_dtypes(exclude<span class="op">=</span><span class="st">"number"</span>).columns:</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> var <span class="kw">not</span> <span class="kw">in</span> [<span class="st">'PassengerId'</span>, <span class="st">'Name'</span>, <span class="st">'Ticket'</span>]:</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>        sns.countplot(data, x<span class="op">=</span>var, stat<span class="op">=</span><span class="st">"proportion"</span>, ax<span class="op">=</span>axs[i<span class="op">//</span><span class="dv">2</span>, i <span class="op">%</span> <span class="dv">2</span>])</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>        axs[i<span class="op">//</span><span class="dv">2</span>, i <span class="op">%</span> <span class="dv">2</span>].set_title(<span class="ss">f'Distribution of </span><span class="sc">{</span>var<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>        axs[i<span class="op">//</span><span class="dv">2</span>, i <span class="op">%</span> <span class="dv">2</span>].set_yscale(<span class="st">'log'</span>)</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>        axs[i<span class="op">//</span><span class="dv">2</span>, i <span class="op">%</span> <span class="dv">2</span>].bar_label(axs[i<span class="op">//</span><span class="dv">2</span>, i <span class="op">%</span> <span class="dv">2</span>].containers[<span class="dv">0</span>], fmt<span class="op">=</span><span class="st">"</span><span class="sc">%.3f</span><span class="st">"</span>)</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>        i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-18-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>It is interesting that variable Sex and Survive have exact same proportion. We will see later if this is a coincidence or connection?</li>
+</ul>
 </section>
 <section id="bivariatemultivariate-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="bivariatemultivariate-analysis">2. Bivariate/Multivariate Analysis</h2>
 <p>We are primarily interested in exploring the relationship between each column and the likelihood of passenger survival. The following questions will guide you through this exploration. In each question, try to give some comments on what you observe in the graphs.</p>
 <p><strong>A. Survival Analysis:</strong> How did the survival rates vary by gender and class?</p>
 <p><em>Hint</em>: Create bar charts or stacked bar charts showing the survival rates for different passenger classes and genders.</p>
-<div id="cell-12" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To do</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-29" class="cell" data-execution_count="103">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>_, axs <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">4</span>))</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>sns.countplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"Pclass"</span>, hue<span class="op">=</span><span class="st">"Survived"</span>, ax<span class="op">=</span>axs[<span class="dv">0</span>])</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_title(<span class="st">"Barplot of Survived as a function of Pclass"</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>sns.countplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"Sex"</span>, hue<span class="op">=</span><span class="st">"Survived"</span>, ax<span class="op">=</span>axs[<span class="dv">1</span>])</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_title(<span class="st">"Barplot of Survived as a function of Gender"</span>)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-19-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
+</div>
+</div>
+<ul>
+<li><p>According to this graph, majority of passengers did not survive within each class. The survival rate for the first class passengers are nearly the same. However, the rate of survival drops significantly within second and third class passengers.</p></li>
+<li><p>It is now clear that according to this dataset, all survivors were females and all non survivors are males. Note that in Kaggle, the data is cleaner than the original dataset or the one contained in <code>sns.load_dataset('titanic')</code>.</p></li>
+</ul>
 <p><strong>B. Fare and Survival:</strong> Is there a relationship between the fare paid and the likelihood of survival?</p>
 <p><em>Hint</em>: Create boxplots to analyze the fare distribution among survivors and non-survivors.</p>
-<div id="cell-14" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To do</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-32" class="cell" data-execution_count="104">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sns.histplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"Fare"</span>, hue<span class="op">=</span><span class="st">"Survived"</span>, log_scale<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Barplot of Survived as a function of Fare"</span>)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-20-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
+</div>
+</div>
+<div id="cell-33" class="cell" data-execution_count="105">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>sns.boxplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"Survived"</span>, y<span class="op">=</span><span class="st">"Fare"</span>, log_scale<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Boxplot of Fare vs Survival"</span>)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-21-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>The graph shows that the passengers who spent less fare, had less chance of surviving. People who spent large fare, probably very rich, had higher chance of surviving.</li>
+</ul>
 <p><strong>C. Family Size:</strong> How does family size (number of siblings/spouses and parents/children) impact the chances of survival?</p>
-<div id="cell-16" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To do</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-36" class="cell" data-execution_count="106">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>_, axs <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">4</span>))</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>sns.countplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"SibSp"</span>, hue<span class="op">=</span><span class="st">"Survived"</span>, ax<span class="op">=</span>axs[<span class="dv">0</span>])</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_title(<span class="st">"Barplot of Survived as a function of SibSp"</span>)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_yscale(<span class="st">"log"</span>)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>sns.countplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"Parch"</span>, hue<span class="op">=</span><span class="st">"Survived"</span>, ax<span class="op">=</span>axs[<span class="dv">1</span>])</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_title(<span class="st">"Barplot of Survived as a function of Parch"</span>)</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_yscale(<span class="st">"log"</span>)</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-22-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
+</div>
+</div>
+<ul>
+<li>The graphs show that if a person was from a small family, he/she had a better chance of survival than those who are from large families.</li>
+</ul>
 <p><strong>D. Embarkation Points:</strong> How do survival rates differ based on the port of embarkation (C, Q, S)?</p>
-<div id="cell-18" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To do</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-39" class="cell" data-execution_count="107">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> sns.countplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"Embarked"</span>, stat<span class="op">=</span><span class="st">"proportion"</span>, hue<span class="op">=</span><span class="st">"Survived"</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Distribution of embarkation points"</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>ax.bar_label(ax.containers[<span class="dv">0</span>], fmt<span class="op">=</span><span class="st">"</span><span class="sc">%.3f</span><span class="st">"</span>)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>ax.bar_label(ax.containers[<span class="dv">1</span>], fmt<span class="op">=</span><span class="st">"</span><span class="sc">%.3f</span><span class="st">"</span>)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-23-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
+</div>
+</div>
+<p>The graph reveals that majority of the passengers were embarked from Southampton (S) and only around 1/3 of those passengers survived. The second majority of passengers were embarked Cherbourg (C), and among those poeple, around 65% survived. Finally, passengers that embarked from Queenstown (Q) had a better chance of survival (&gt; 50% among their group).</p>
 <p><strong>E. Pclass and Age</strong>: How does passenger class correlate with age?</p>
-<div id="cell-20" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To do</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-42" class="cell" data-execution_count="108">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> sns.boxplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"Pclass"</span>, y<span class="op">=</span><span class="st">"Age"</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Age within each class"</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-24-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
+</div>
+</div>
+<p>Majority of the third class passengers were younger people. The age increases within 2nd and 1st class. The first class passengers were elders and probably rich people.</p>
 <p><strong>F. Gender and Age</strong>: How does age distribution differ between male and female passengers?</p>
-<div id="cell-22" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To do</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-45" class="cell" data-execution_count="109">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> sns.boxplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"Sex"</span>, y<span class="op">=</span><span class="st">"Age"</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Age vs Gender"</span>)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-25-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
+</div>
+</div>
+<p>Age is distributed equally among male and female passengers. The oldest passenger were female.</p>
 <p><strong>G. Age, Fare, Gender and Survival:</strong> View the connection of Age, Fare, Gender and Survival in one graph.</p>
-<div id="cell-24" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To do</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-48" class="cell" data-execution_count="110">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> sns.scatterplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"Fare"</span>, y<span class="op">=</span><span class="st">"Age"</span>, hue<span class="op">=</span><span class="st">"Sex"</span>, style<span class="op">=</span><span class="st">"Survived"</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Age, Fare, Gender and Survived"</span>)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>ax.set_xscale(<span class="st">"log"</span>)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-26-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
+</div>
+</div>
+<ul>
+<li><p>First of all, older people seem to spend more on fare than younger individuals, based on the tendency observed in the data points.</p></li>
+<li><p>Gender (color) and survival (shape) appear to have no discernible connection with Fare and Age, as the colors and shapes are randomly distributed without any clear tendency or pattern.</p></li>
+</ul>
 <p><strong>H. Age, Fare, Class and Survival:</strong> View the connection of Age, Fare, Class and Survival in one graph.</p>
-<div id="cell-26" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To do</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-51" class="cell" data-execution_count="111">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> sns.scatterplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">"Fare"</span>, y<span class="op">=</span><span class="st">"Age"</span>, hue<span class="op">=</span><span class="st">"Pclass"</span>, style<span class="op">=</span><span class="st">"Survived"</span>)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Age, Fare, Pclass and Survived"</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>ax.set_xscale(<span class="st">"log"</span>)</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_Data_Visualization_files/figure-html/cell-27-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
+</div>
+</div>
+<ul>
+<li><p>It is clear that Fare and Class are related as the color changes from left to right indicating that the first class passengers spent more fare than other classes.</p></li>
+<li><p>Survival seem to be distributed evenly among classes in this graph, but we already saw that the first class had better chance of survival than other class passengers.</p></li>
+</ul>
 <p><strong>I.</strong> Based on your analysis, which variables appear to have the greatest impact on the likelihood of survival?</p>
 <blockquote class="blockquote">
-<p>Conclusion: …</p>
+<p>Conclusion: According to this dataset, the most impactful variable on the survival chance is gender, where females had a significantly higher chance of survival than males. The second most impactful variable appears to be passenger class (Pclass) or fare. It is shown in qusetion <strong>A</strong> that first-class passengers had a better chance of survival than those in lower classes.</p>
 </blockquote>
+<p><strong>Additional Observations:</strong></p>
+<ul>
+<li>Age: Younger passengers, particularly children, had a higher survival rate compared to adults.</li>
+<li>Embarkation Point: Passengers who embarked from Cherbourg (C) had a slightly higher survival rate compared to those who embarked from Southampton (S) or Queenstown (Q).</li>
+<li>Family Size: Passengers traveling with smaller family sizes (SibSp and Parch) had a higher chance of survival compared to those with larger families.</li>
+</ul>
 </section>
 <section id="further-readings" class="level1">
 <h1>Further readings</h1>
