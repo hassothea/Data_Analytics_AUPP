@@ -1369,7 +1369,7 @@ if (outputEl) {{
 <ul>
 <li><strong>Objective</strong>: find parameters <span class="math inline">\(\color{blue}{\theta^*=(W_1,..,W_L,b_1,...,b_L)}\)</span> that minimizes the average loss over the full training data: <span class="math inline">\(L(\color{blue}{\theta})=\frac{1}{n}\sum_{i=1}^n\ell(y_i,\color{blue}{\hat{y}_i}).\)</span>
 <ul>
-<li>For example, on Abalone dataset: <span class="math inline">\(L(\color{blue}{\theta})=\frac{1}{n}\sum_{i=1}^n(y_i,\color{blue}{\hat{y}_i})^2.\)</span></li>
+<li>For example, on Abalone dataset: <span class="math inline">\(L(\color{blue}{\theta})=\frac{1}{n}\sum_{i=1}^n(y_i-\color{blue}{\hat{y}_i})^2.\)</span></li>
 </ul></li>
 <li>Initialiaztion:
 <ul>
@@ -1437,7 +1437,7 @@ if (outputEl) {{
 <div class="column" style="width:60%;">
 <ul>
 <li><strong>Objective</strong>: find parameters <span class="math inline">\(\color{blue}{\theta^*=(W_1,..,W_L,b_1,...,b_L)}\)</span> that minimizes <span class="math inline">\(L(\color{blue}{\theta})=\frac{1}{n}\sum_{i=1}^n\ell(y_i,\color{blue}{\hat{y}_i}).\)</span></li>
-<li>But here, we <code>approximate</code> the <code>full loss</code> using <code>small subsets</code> of size <span class="math inline">\(b&lt;&lt;n\)</span> called <span class="light-blue"><strong>minibatches</strong></span>: <span class="math inline">\(\hat{L}_b(\color{blue}{\theta})=\frac{1}{b}\sum_{i=1}^b(y_i^B,\color{blue}{\hat{y}_i^B})^2.\)</span></li>
+<li>But here, we <code>approximate</code> the <code>full loss</code> using <code>small subsets</code> of size <span class="math inline">\(b&lt;&lt;n\)</span> called <span class="light-blue"><strong>minibatches</strong></span>: <span class="math inline">\(\hat{L}_b(\color{blue}{\theta})=\frac{1}{b}\sum_{i=1}^b(y_i^B-\color{blue}{\hat{y}_i^B})^2.\)</span></li>
 <li>Initialiaztion:
 <ul>
 <li>learning rate: <span class="math inline">\(\eta&gt;0\)</span> (small <span class="math inline">\(\approx 0.001\)</span> or <span class="math inline">\(0.01\)</span>)</li>
